@@ -16,7 +16,7 @@ for i in "${TUNNELS[@]}"; do
     DEST_HOST=${TUNNEL[1]}
     DEST_PORT=${TUNNEL[2]}
 
-    $SSH_CMD -N $SSH_USER@$SSH_HOST \
+    $SSH_CMD -4 -N $SSH_USER@$SSH_HOST \
              -p $SSH_PORT \
              -L $ORIGIN_PORT:$DEST_HOST:$DEST_PORT \
              -o ExitOnForwardFailure=yes &
