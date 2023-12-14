@@ -18,7 +18,7 @@ for i in "${TUNNELS[@]}"; do
 
     $SSH_CMD -N $SSH_USER@$SSH_HOST \
              -p $SSH_PORT \
-             -L *:$ORIGIN_PORT:$DEST_HOST:$DEST_PORT \
+             -L $ORIGIN_PORT:$DEST_HOST:$DEST_PORT \
              -o ExitOnForwardFailure=yes &
 done
 

@@ -3,8 +3,11 @@ version: '3.8'
 services:
   ssh-tunnel:
     build: .
+    container_name: ssh-tunnel
     env_file:
       - .env
     volumes:
       - ${SSH_KEY_DIR}:/ssh-keys
-    network_mode: "host"
+    ports:
+      - "8080:8080" # Modificar estos puertos segun los puertos que utilicemos en el fichero .env
+      - "9090:9090" # Modificar estos puertos segun los puertos que utilicemos en el fichero .env
