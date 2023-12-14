@@ -36,7 +36,7 @@ La configuración del proyecto se realiza a través del archivo `.env`, que cont
 graph LR
    A[Cliente en Localhost] -- 8080 --> B((Túnel SSH))
    B -- 80 --> C[Servicio Interno en Host Destino]
-   style B fill:#f9f,stroke:#333,stroke-width:2px
+   style B fill:#29e0ff,stroke:#333,stroke-width:2px
 ```
 2. **Túnel Simple con autenticación mediante usuario y contraseña**
 
@@ -56,7 +56,7 @@ graph LR
 graph LR
    A[Cliente en Localhost] -- 8080 --> B((Túnel SSH))
    B -- 80 --> C[Servicio Interno en Host Destino]
-   style B fill:#f9f,stroke:#333,stroke-width:2px
+   style B fill:#29e0ff,stroke:#333,stroke-width:2px
 ```
 3. **Múltiples Túneles**
 
@@ -80,7 +80,7 @@ graph LR
    A -- 9090 --> B
    B -- 80 --> C[Servicio Interno 1 en Host Destino]
    B -- 443 --> D[Servicio Interno 2 en Host Destino]
-   style B fill:#f9f,stroke:#333,stroke-width:2px
+   style B fill:#29e0ff,stroke:#333,stroke-width:2px
 ```
 
 ## Uso
@@ -94,5 +94,3 @@ Utilice el script `control_tunnel.sh` para controlar el túnel SSH:
 Para construir el contenedor Docker, ejecute:
 `docker-compose build`
 
-## Contribuciones
-Las contribuciones al proyecto son bienvenidas. Por favor, envíe Pull Requests o abra Issues para discutir mejoras o cambios.
