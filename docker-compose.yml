@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  ssh-tunnel:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ${SSH_KEY_DIR}:/ssh-keys
+    network_mode: "host"
