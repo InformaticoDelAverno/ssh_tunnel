@@ -94,3 +94,5 @@ Utilice el script `control_tunnel.sh` para controlar el túnel SSH:
 Para construir el contenedor Docker, ejecute:
 `docker-compose build`
 
+Si no quieres construirte la imagen, puedes utilizar una ya construida que se encuentra publicada en [Docker hub](https://hub.docker.com/r/informaticodelaverno/ssh-tunnel).
+
